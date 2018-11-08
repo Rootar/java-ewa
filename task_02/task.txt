@@ -1,0 +1,5 @@
+Napisz program, ktory pobiera dwie liczby oraz lancuch znakow z wiersza polecen oraz wyswietla fragment podanego lancucha okreslony wprowadzonymi liczbami. Na przyklad: 
+java Substring Witaj 2 4 
+powinien wyswietlic: 
+taj 
+Obsluz wszystkie mozliwe wyjatki, ktore moga wystapic w przypadku zlego zestawu argumentow.
