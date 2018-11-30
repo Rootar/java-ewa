@@ -2,11 +2,23 @@ package szyszki;
 import java.util.*;
 import java.lang.*; 
 
-public class task1 {
 
-	public static void main (String[] args)
+
+class PanWyjatek extends Exception
+{ 
+	public PanWyjatek(String error) 
+	{
+        super(error);
+    }
+}
+public class Task1 {
+	
+
+
+	public static void main(String[] args) throws PanWyjatek
 {
 		//
+		PanWyjatek mrException = new PanWyjatek("Something went wrong :(");
 		int a, b, c;
 		try 
 		{
@@ -14,9 +26,9 @@ public class task1 {
 			b = Integer.parseInt(args[1]);
 			c = Integer.parseInt(args[2]);
 		}
-		catch (Exception a)
+		catch (PanWyjatek p)
 		{
-			System.out.println("Exception - something went wrong");
+			throw mrException;
 		}
 		System.out.println("Our quadratic equation: " + a + "x^2, " + b + "x, " + c);
 		
@@ -28,7 +40,7 @@ public class task1 {
 		
 		if (delta > 0)
 		{
-			double deltasqrt = Math.sqrt(delta); 
+			double deltaSqrt = Math.sqrt(delta); 
 			double x1, x2;
 			x1 = ((-b) - deltasqrt)/(2*a);
 			x2 = ((-b) + deltasqrt)/(2*a);
